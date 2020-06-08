@@ -6,7 +6,7 @@ import io.ktor.client.engine.cio.CIO
 import io.ktor.util.KtorExperimentalAPI
 
 @OptIn(KtorExperimentalAPI::class)
-internal actual fun websocketClient(): HttpClientEngineFactory<HttpClientEngineConfig> = CIO
+internal fun websocketClient(): HttpClientEngineFactory<HttpClientEngineConfig> = CIO
 
 @OptIn(KtorExperimentalAPI::class)
-internal actual fun httpClient(): HttpClientEngineFactory<HttpClientEngineConfig> = CIO
+internal fun httpClient(): HttpClientEngineFactory<HttpClientEngineConfig> = CIO
