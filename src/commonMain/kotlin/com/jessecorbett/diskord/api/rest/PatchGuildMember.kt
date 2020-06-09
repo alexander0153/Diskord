@@ -11,3 +11,8 @@ data class PatchGuildMember(
     @SerialName("deaf") val deaf: Boolean? = null,
     @SerialName("channel_id") val channelId: String? = null
 )
+
+@Serializable
+data class PatchGuildMemberDisconnect(
+    @SerialName("channel_id") val channelId: String? = null
+)

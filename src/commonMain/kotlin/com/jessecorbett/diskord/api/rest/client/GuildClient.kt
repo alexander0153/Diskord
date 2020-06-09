@@ -181,6 +181,9 @@ class GuildClient(
     suspend fun updateMember(userId: String, guildMember: PatchGuildMember) =
         patchRequest("/guilds/$guildId/members/$userId", guildMember, PatchGuildMember.serializer(), omitNullProperties = true)
 
+    suspend fun updateMemberDisconnectFromVoice(userId: String) =
+        patchRequest("/guilds/$guildId/members/$userId", PatchGuildMemberDisconnect(), PatchGuildMemberDisconnect.serializer(), omitNullProperties = false)
+
     /**
      * Change a guild member's nickname.
      *
